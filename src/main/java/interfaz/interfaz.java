@@ -122,6 +122,7 @@ public class interfaz extends javax.swing.JFrame {
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn1.setBackground(new java.awt.Color(35, 63, 111));
+        btn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -160,6 +161,7 @@ public class interfaz extends javax.swing.JFrame {
         panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
 
         btn2.setBackground(new java.awt.Color(35, 63, 111));
+        btn2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -188,6 +190,7 @@ public class interfaz extends javax.swing.JFrame {
         panel_btn.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 90));
 
         btn3.setBackground(new java.awt.Color(35, 63, 111));
+        btn3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
