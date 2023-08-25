@@ -67,6 +67,7 @@ public class interfaz extends javax.swing.JFrame {
         btn1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
         btn2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -140,13 +141,21 @@ public class interfaz extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alumnos", "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox1.setBackground(new java.awt.Color(25, 55, 113));
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
+        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 130, 20));
+
+        jLabel21.setBackground(new java.awt.Color(35, 63, 111));
+        jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel21.setText("ALUMNOS");
+        btn1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 90));
 
         panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
 
@@ -802,11 +811,11 @@ public class interfaz extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         String selectedItem = (String) jComboBox1.getSelectedItem();
-    if (selectedItem.equals("Ingresar / Buscar")) {
-        Menu.setSelectedIndex(0);
-    } else if (selectedItem.equals("Vizualizar")) {
-        Menu.setSelectedIndex(1);
-    }
+        if (selectedItem.equals("Ingresar / Buscar")) {
+            Menu.setSelectedIndex(0);
+        } else if (selectedItem.equals("Vizualizar")) {
+            Menu.setSelectedIndex(1);
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void cargartabla() {
@@ -912,6 +921,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
