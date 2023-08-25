@@ -51,6 +51,7 @@ public class interfaz extends javax.swing.JFrame {
         
         
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -65,7 +66,7 @@ public class interfaz extends javax.swing.JFrame {
         panel_btn = new javax.swing.JPanel();
         btn1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         btn2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -139,10 +140,13 @@ public class interfaz extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jLabel4.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("INGRESAR");
-        btn1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 140, 90));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alumnos", "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
 
@@ -796,6 +800,15 @@ public class interfaz extends javax.swing.JFrame {
         btn_BUSCAR.setBackground(new Color(108,149,196));
     }//GEN-LAST:event_btn_BUSCARMouseMoved
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        String selectedItem = (String) jComboBox1.getSelectedItem();
+    if (selectedItem.equals("Ingresar / Buscar")) {
+        Menu.setSelectedIndex(0);
+    } else if (selectedItem.equals("Vizualizar")) {
+        Menu.setSelectedIndex(1);
+    }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -871,6 +884,7 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Menu;
@@ -884,6 +898,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn_MODIFICAR;
     private javax.swing.JPanel btn__ELIMINAR;
     private javax.swing.JComboBox<String> cbxSexo;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -897,7 +912,6 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
