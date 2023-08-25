@@ -24,7 +24,7 @@ public class  Cconexion {
         try {
             conectar = DriverManager.getConnection(cadena, usuario, contrasenia);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error al conectar la base de datos: " + e.toString());
+            JOptionPane.showMessageDialog(null, "Error al conectar la base de datos PUCTA HERMANO UN GENIO: " + e.toString());
         }
         return conectar;
         }
