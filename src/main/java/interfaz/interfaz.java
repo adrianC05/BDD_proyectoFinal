@@ -145,7 +145,7 @@ public class interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlb_encabezado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ENCABEZADO1.jpeg"))); // NOI18N
-        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 90));
+        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 160));
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -760,7 +760,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn1MouseClicked
 
     private void btn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseClicked
-        Menu.setSelectedIndex(1);
+        Menu.setSelectedIndex(2);
     }//GEN-LAST:event_btn2MouseClicked
 
     private void btn3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseClicked
@@ -1056,7 +1056,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn4MouseMoved
 
     private void btn4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseClicked
-        // TODO add your handling code here:
+        Menu.setSelectedIndex(4);
     }//GEN-LAST:event_btn4MouseClicked
 
     private void btn4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseExited
@@ -1077,7 +1077,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn5MouseMoved
 
     private void btn5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseClicked
-        // TODO add your handling code here:
+        Menu.setSelectedIndex(6);
     }//GEN-LAST:event_btn5MouseClicked
 
     private void btn5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseExited
@@ -1090,6 +1090,7 @@ public class interfaz extends javax.swing.JFrame {
             Menu.setSelectedIndex(8);
         } else if (selectedItem.equals("Vizualizar")) {
             Menu.setSelectedIndex(9);
+            //carriongaay
         }
     }//GEN-LAST:event_cbo_notasActionPerformed
 
@@ -1098,7 +1099,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn6MouseMoved
 
     private void btn6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseClicked
-        // TODO add your handling code here:
+        Menu.setSelectedIndex(8);
     }//GEN-LAST:event_btn6MouseClicked
 
     private void btn6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseExited
