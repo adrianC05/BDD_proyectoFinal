@@ -1090,6 +1090,7 @@ public class interfaz extends javax.swing.JFrame {
             Menu.setSelectedIndex(8);
         } else if (selectedItem.equals("Vizualizar")) {
             Menu.setSelectedIndex(9);
+            //carriongaay
         }
     }//GEN-LAST:event_cbo_notasActionPerformed
 
