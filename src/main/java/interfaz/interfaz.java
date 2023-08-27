@@ -176,7 +176,7 @@ public class interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlb_encabezado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ENCABEZADO1.jpeg"))); // NOI18N
-        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 90));
+        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 160));
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -293,7 +293,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel21.setBackground(new java.awt.Color(35, 63, 111));
         jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel21.setText("ALUMNOS 2");
+        jLabel21.setText("ALUMNOS");
         btn1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 80));
 
         panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 80));
