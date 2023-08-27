@@ -64,12 +64,25 @@ public class interfaz extends javax.swing.JFrame {
 
         jlb_encabezado1 = new javax.swing.JLabel();
         panel_btn = new javax.swing.JPanel();
+        btn6 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jLabel24 = new javax.swing.JLabel();
+        btn5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        btn4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel22 = new javax.swing.JLabel();
         btn1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
         btn2 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         btn3 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -108,6 +121,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jlb_relleno1 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jlb_relleno2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -120,6 +134,123 @@ public class interfaz extends javax.swing.JFrame {
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btn6.setBackground(new java.awt.Color(35, 63, 111));
+        btn6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn6MouseMoved(evt);
+            }
+        });
+        btn6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn6MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn6MouseExited(evt);
+            }
+        });
+        btn6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
+        btn6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+
+        jComboBox5.setBackground(new java.awt.Color(25, 55, 113));
+        jComboBox5.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox5ActionPerformed(evt);
+            }
+        });
+        btn6.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+
+        jLabel24.setBackground(new java.awt.Color(35, 63, 111));
+        jLabel24.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel24.setText("NOTAS");
+        btn6.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 180, 80));
+
+        panel_btn.add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 290, 80));
+
+        btn5.setBackground(new java.awt.Color(35, 63, 111));
+        btn5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn5MouseMoved(evt);
+            }
+        });
+        btn5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn5MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn5MouseExited(evt);
+            }
+        });
+        btn5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
+        btn5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+
+        jComboBox4.setBackground(new java.awt.Color(25, 55, 113));
+        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+        btn5.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+
+        jLabel23.setBackground(new java.awt.Color(35, 63, 111));
+        jLabel23.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel23.setText("MATERIAS");
+        btn5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 180, 80));
+
+        panel_btn.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 290, 80));
+
+        btn4.setBackground(new java.awt.Color(35, 63, 111));
+        btn4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn4MouseMoved(evt);
+            }
+        });
+        btn4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn4MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn4MouseExited(evt);
+            }
+        });
+        btn4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
+        btn4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+
+        jComboBox3.setBackground(new java.awt.Color(25, 55, 113));
+        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        btn4.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+
+        jLabel22.setBackground(new java.awt.Color(35, 63, 111));
+        jLabel22.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel22.setText("CURSOS");
+        btn4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 180, 80));
+
+        panel_btn.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 290, 80));
 
         btn1.setBackground(new java.awt.Color(35, 63, 111));
         btn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -150,15 +281,15 @@ public class interfaz extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 130, 20));
+        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, -1));
 
         jLabel21.setBackground(new java.awt.Color(35, 63, 111));
-        jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(204, 204, 204));
         jLabel21.setText("ALUMNOS");
-        btn1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 90));
+        btn1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 80));
 
-        panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 90));
+        panel_btn.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 80));
 
         btn2.setBackground(new java.awt.Color(35, 63, 111));
         btn2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -178,16 +309,26 @@ public class interfaz extends javax.swing.JFrame {
         });
         btn2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono2.png"))); // NOI18N
-        btn2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
+        btn2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+
+        jComboBox2.setBackground(new java.awt.Color(25, 55, 113));
+        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        btn2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
 
         jLabel14.setBackground(new java.awt.Color(35, 63, 111));
-        jLabel14.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel14.setText("VISUALIZAR");
-        btn2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 90));
+        jLabel14.setText("DOCENTES");
+        btn2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 180, 80));
 
-        panel_btn.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, 90));
+        panel_btn.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 290, 80));
 
         btn3.setBackground(new java.awt.Color(35, 63, 111));
         btn3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -208,14 +349,14 @@ public class interfaz extends javax.swing.JFrame {
         btn3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono4.png"))); // NOI18N
-        btn3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
+        btn3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 50, 70));
 
         jLabel16.setFont(new java.awt.Font("Bahnschrift", 0, 24)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(204, 204, 204));
         jLabel16.setText("SALIR");
-        btn3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 180, 90));
+        btn3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 60));
 
-        panel_btn.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 290, 90));
+        panel_btn.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 420, 260, 70));
 
         getContentPane().add(panel_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 290, 510));
 
@@ -499,6 +640,7 @@ public class interfaz extends javax.swing.JFrame {
         jPanel3.add(jlb_relleno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
 
         Menu.addTab("Tabla", jPanel3);
+        Menu.addTab("tab3", jTabbedPane1);
 
         getContentPane().add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 780, 540));
 
@@ -821,6 +963,63 @@ public class interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        String selectedItem = (String) jComboBox2.getSelectedItem();
+        if (selectedItem.equals("Ingresar / Buscar")) {
+            Menu.setSelectedIndex(0);
+        } else if (selectedItem.equals("Vizualizar")) {
+            Menu.setSelectedIndex(1);
+        }
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void btn4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4MouseMoved
+
+    private void btn4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4MouseClicked
+
+    private void btn4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4MouseExited
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void btn5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5MouseMoved
+
+    private void btn5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5MouseClicked
+
+    private void btn5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5MouseExited
+
+    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox5ActionPerformed
+
+    private void btn6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6MouseMoved
+
+    private void btn6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6MouseClicked
+
+    private void btn6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6MouseExited
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -903,6 +1102,9 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn1;
     private javax.swing.JPanel btn2;
     private javax.swing.JPanel btn3;
+    private javax.swing.JPanel btn4;
+    private javax.swing.JPanel btn5;
+    private javax.swing.JPanel btn6;
     private javax.swing.JPanel btn_BUSCAR;
     private javax.swing.JPanel btn_ELIMINAR2;
     private javax.swing.JPanel btn_GUARDAR;
@@ -911,11 +1113,14 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn__ELIMINAR;
     private javax.swing.JComboBox<String> cbxSexo;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -925,12 +1130,20 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel jlb_encabezado1;
     private javax.swing.JLabel jlb_relleno1;
     private javax.swing.JLabel jlb_relleno2;
