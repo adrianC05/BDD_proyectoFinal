@@ -66,29 +66,29 @@ public class interfaz extends javax.swing.JFrame {
         panel_btn = new javax.swing.JPanel();
         btn6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        cbo_notas = new javax.swing.JComboBox<>();
         jLabel24 = new javax.swing.JLabel();
         btn5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        cbo_materias = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
         btn4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        cbo_cursos = new javax.swing.JComboBox<>();
         jLabel22 = new javax.swing.JLabel();
         btn1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbo_alumnos = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
         btn2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cbo_docentes = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         btn3 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         Menu = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        pnl_0_Ingreso_Alu = new javax.swing.JPanel();
         btn_BUSCAR = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
@@ -114,14 +114,29 @@ public class interfaz extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jlb_relleno3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        pnl_1_Tabla_Alu = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAlumno = new javax.swing.JTable();
         btn_ELIMINAR2 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jlb_relleno1 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        pnl_2_Ingreso_Docnt = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        pnl_3_Tabla_Docnt = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        pnl_4_Ingreso_Cur = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        pnl_5_Tabla_Cur = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        pnl_6_Ingreso_Mat = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        pnl_7_Tabla_Mat = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        pnl_8_Ingreso_Not = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        pnl_9_Tabla_Not = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
         jlb_relleno2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -130,7 +145,7 @@ public class interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlb_encabezado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ENCABEZADO1.jpeg"))); // NOI18N
-        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 160));
+        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 90));
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -156,15 +171,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox5.setBackground(new java.awt.Color(25, 55, 113));
-        jComboBox5.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        cbo_notas.setBackground(new java.awt.Color(25, 55, 113));
+        cbo_notas.setForeground(new java.awt.Color(255, 255, 255));
+        cbo_notas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        cbo_notas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                cbo_notasActionPerformed(evt);
             }
         });
-        btn6.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+        btn6.add(cbo_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
 
         jLabel24.setBackground(new java.awt.Color(35, 63, 111));
         jLabel24.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
@@ -195,15 +210,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox4.setBackground(new java.awt.Color(25, 55, 113));
-        jComboBox4.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        cbo_materias.setBackground(new java.awt.Color(25, 55, 113));
+        cbo_materias.setForeground(new java.awt.Color(255, 255, 255));
+        cbo_materias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        cbo_materias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                cbo_materiasActionPerformed(evt);
             }
         });
-        btn5.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+        btn5.add(cbo_materias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
 
         jLabel23.setBackground(new java.awt.Color(35, 63, 111));
         jLabel23.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
@@ -234,15 +249,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox3.setBackground(new java.awt.Color(25, 55, 113));
-        jComboBox3.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        cbo_cursos.setBackground(new java.awt.Color(25, 55, 113));
+        cbo_cursos.setForeground(new java.awt.Color(255, 255, 255));
+        cbo_cursos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        cbo_cursos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                cbo_cursosActionPerformed(evt);
             }
         });
-        btn4.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+        btn4.add(cbo_cursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
 
         jLabel22.setBackground(new java.awt.Color(35, 63, 111));
         jLabel22.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
@@ -273,15 +288,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox1.setBackground(new java.awt.Color(25, 55, 113));
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbo_alumnos.setBackground(new java.awt.Color(25, 55, 113));
+        cbo_alumnos.setForeground(new java.awt.Color(255, 255, 255));
+        cbo_alumnos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        cbo_alumnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cbo_alumnosActionPerformed(evt);
             }
         });
-        btn1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, -1));
+        btn1.add(cbo_alumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, -1));
 
         jLabel21.setBackground(new java.awt.Color(35, 63, 111));
         jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
@@ -312,15 +327,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icono1.png"))); // NOI18N
         btn2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, 50));
 
-        jComboBox2.setBackground(new java.awt.Color(25, 55, 113));
-        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        cbo_docentes.setBackground(new java.awt.Color(25, 55, 113));
+        cbo_docentes.setForeground(new java.awt.Color(255, 255, 255));
+        cbo_docentes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingresar / Buscar", "Vizualizar" }));
+        cbo_docentes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                cbo_docentesActionPerformed(evt);
             }
         });
-        btn2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
+        btn2.add(cbo_docentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 130, 20));
 
         jLabel14.setBackground(new java.awt.Color(35, 63, 111));
         jLabel14.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
@@ -360,7 +375,7 @@ public class interfaz extends javax.swing.JFrame {
 
         getContentPane().add(panel_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 290, 510));
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnl_0_Ingreso_Alu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_BUSCAR.setBackground(new java.awt.Color(35, 63, 111));
         btn_BUSCAR.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -381,13 +396,13 @@ public class interfaz extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
         btn_BUSCAR.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
 
-        jPanel2.add(btn_BUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 105, 40, 30));
+        pnl_0_Ingreso_Alu.add(btn_BUSCAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 105, 40, 30));
 
         txtId.setBackground(new java.awt.Color(25, 55, 113));
         txtId.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtId.setForeground(new java.awt.Color(204, 204, 204));
         txtId.setBorder(null);
-        jPanel2.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 112, 120, -1));
+        pnl_0_Ingreso_Alu.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 112, 120, -1));
 
         txtCedula.setBackground(new java.awt.Color(25, 55, 113));
         txtCedula.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
@@ -398,7 +413,7 @@ public class interfaz extends javax.swing.JFrame {
                 txtCedulaActionPerformed(evt);
             }
         });
-        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 172, 193, -1));
+        pnl_0_Ingreso_Alu.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 172, 193, -1));
 
         txtNombre.setBackground(new java.awt.Color(25, 55, 113));
         txtNombre.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
@@ -410,25 +425,25 @@ public class interfaz extends javax.swing.JFrame {
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 230, 193, -1));
+        pnl_0_Ingreso_Alu.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 230, 193, -1));
 
         txtApellido.setBackground(new java.awt.Color(25, 55, 113));
         txtApellido.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtApellido.setForeground(new java.awt.Color(204, 204, 204));
         txtApellido.setBorder(null);
-        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 289, 193, -1));
+        pnl_0_Ingreso_Alu.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 289, 193, -1));
 
         txtDireccion.setBackground(new java.awt.Color(25, 55, 113));
         txtDireccion.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtDireccion.setForeground(new java.awt.Color(204, 204, 204));
         txtDireccion.setBorder(null);
-        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 349, 193, -1));
+        pnl_0_Ingreso_Alu.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 349, 193, -1));
 
         txtEmail.setBackground(new java.awt.Color(25, 55, 113));
         txtEmail.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtEmail.setForeground(new java.awt.Color(204, 204, 204));
         txtEmail.setBorder(null);
-        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 112, 220, -1));
+        pnl_0_Ingreso_Alu.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 112, 220, -1));
 
         cbxSexo.setBackground(new java.awt.Color(25, 55, 113));
         cbxSexo.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
@@ -440,25 +455,25 @@ public class interfaz extends javax.swing.JFrame {
                 cbxSexoActionPerformed(evt);
             }
         });
-        jPanel2.add(cbxSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 345, 210, -1));
+        pnl_0_Ingreso_Alu.add(cbxSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 345, 210, -1));
 
         txtFecha.setBackground(new java.awt.Color(25, 55, 113));
         txtFecha.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtFecha.setForeground(new java.awt.Color(204, 204, 204));
         txtFecha.setBorder(null);
-        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 172, 220, -1));
+        pnl_0_Ingreso_Alu.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 172, 220, -1));
 
         txtDiscapacidad.setBackground(new java.awt.Color(25, 55, 113));
         txtDiscapacidad.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtDiscapacidad.setForeground(new java.awt.Color(204, 204, 204));
         txtDiscapacidad.setBorder(null);
-        jPanel2.add(txtDiscapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 234, 160, -1));
+        pnl_0_Ingreso_Alu.add(txtDiscapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 234, 160, -1));
 
         txtObersevaciones.setBackground(new java.awt.Color(25, 55, 113));
         txtObersevaciones.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtObersevaciones.setForeground(new java.awt.Color(204, 204, 204));
         txtObersevaciones.setBorder(null);
-        jPanel2.add(txtObersevaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 289, 160, -1));
+        pnl_0_Ingreso_Alu.add(txtObersevaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 289, 160, -1));
 
         btn_LIMPIAR.setBackground(new java.awt.Color(37, 67, 117));
         btn_LIMPIAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -485,7 +500,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar.png"))); // NOI18N
         btn_LIMPIAR.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
 
-        jPanel2.add(btn_LIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, 40));
+        pnl_0_Ingreso_Alu.add(btn_LIMPIAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, 40));
 
         btn__ELIMINAR.setBackground(new java.awt.Color(37, 67, 117));
         btn__ELIMINAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -512,7 +527,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacho2.png"))); // NOI18N
         btn__ELIMINAR.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
 
-        jPanel2.add(btn__ELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 40));
+        pnl_0_Ingreso_Alu.add(btn__ELIMINAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 40));
 
         btn_MODIFICAR.setBackground(new java.awt.Color(37, 67, 117));
         btn_MODIFICAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -539,7 +554,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar2.png"))); // NOI18N
         btn_MODIFICAR.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1, -1, 40));
 
-        jPanel2.add(btn_MODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 130, 40));
+        pnl_0_Ingreso_Alu.add(btn_MODIFICAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 130, 40));
 
         btn_GUARDAR.setBackground(new java.awt.Color(37, 67, 117));
         btn_GUARDAR.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -566,15 +581,15 @@ public class interfaz extends javax.swing.JFrame {
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guardar2.png"))); // NOI18N
         btn_GUARDAR.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 0, -1, 40));
 
-        jPanel2.add(btn_GUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 130, 40));
+        pnl_0_Ingreso_Alu.add(btn_GUARDAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 130, 40));
 
         jlb_relleno3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO5.jpeg"))); // NOI18N
-        jPanel2.add(jlb_relleno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 11, 820, 500));
+        pnl_0_Ingreso_Alu.add(jlb_relleno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 11, 820, 500));
 
-        Menu.addTab("Ingresar Alumnos", jPanel2);
+        Menu.addTab("0 I_Alu", pnl_0_Ingreso_Alu);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnl_1_Tabla_Alu.setBackground(new java.awt.Color(0, 0, 0));
+        pnl_1_Tabla_Alu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblAlumno.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tblAlumno.setModel(new javax.swing.table.DefaultTableModel(
@@ -607,7 +622,7 @@ public class interfaz extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblAlumno);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 370));
+        pnl_1_Tabla_Alu.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 370));
 
         btn_ELIMINAR2.setBackground(new java.awt.Color(37, 67, 117));
         btn_ELIMINAR2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -634,13 +649,68 @@ public class interfaz extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacho2.png"))); // NOI18N
         btn_ELIMINAR2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
 
-        jPanel3.add(btn_ELIMINAR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 210, 50));
+        pnl_1_Tabla_Alu.add(btn_ELIMINAR2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 210, 50));
 
         jlb_relleno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO1.jpeg"))); // NOI18N
-        jPanel3.add(jlb_relleno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
+        pnl_1_Tabla_Alu.add(jlb_relleno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
 
-        Menu.addTab("Tabla", jPanel3);
-        Menu.addTab("tab3", jTabbedPane1);
+        Menu.addTab("1 T_Alu", pnl_1_Tabla_Alu);
+
+        pnl_2_Ingreso_Docnt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setText("DOCENTE INGRESO");
+        pnl_2_Ingreso_Docnt.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("2 I_Docnt", pnl_2_Ingreso_Docnt);
+
+        pnl_3_Tabla_Docnt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel25.setText("DOCENTE TABLA");
+        pnl_3_Tabla_Docnt.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("3 T_ Docnt", pnl_3_Tabla_Docnt);
+
+        pnl_4_Ingreso_Cur.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel26.setText("INGRESO CURSOS");
+        pnl_4_Ingreso_Cur.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("4 I_Cur", pnl_4_Ingreso_Cur);
+
+        pnl_5_Tabla_Cur.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setText("TABLA_CURSOS");
+        pnl_5_Tabla_Cur.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("5 T_Cur", pnl_5_Tabla_Cur);
+
+        pnl_6_Ingreso_Mat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setText("INGRESO MATERIA");
+        pnl_6_Ingreso_Mat.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("6 I_Mat", pnl_6_Ingreso_Mat);
+
+        pnl_7_Tabla_Mat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel29.setText("TABLA MATERIA");
+        pnl_7_Tabla_Mat.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("7 T_Mat", pnl_7_Tabla_Mat);
+
+        pnl_8_Ingreso_Not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel30.setText("INGRESO NOTAS");
+        pnl_8_Ingreso_Not.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("8 I_Not", pnl_8_Ingreso_Not);
+
+        pnl_9_Tabla_Not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel31.setText("TABLA NOTAS");
+        pnl_9_Tabla_Not.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+
+        Menu.addTab("9 T_Not", pnl_9_Tabla_Not);
 
         getContentPane().add(Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 780, 540));
 
@@ -954,27 +1024,32 @@ public class interfaz extends javax.swing.JFrame {
         btn_BUSCAR.setBackground(new Color(108,149,196));
     }//GEN-LAST:event_btn_BUSCARMouseMoved
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        String selectedItem = (String) jComboBox1.getSelectedItem();
+    private void cbo_alumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_alumnosActionPerformed
+        String selectedItem = (String) cbo_alumnos.getSelectedItem();
         if (selectedItem.equals("Ingresar / Buscar")) {
             Menu.setSelectedIndex(0);
         } else if (selectedItem.equals("Vizualizar")) {
             Menu.setSelectedIndex(1);
         }
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cbo_alumnosActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        String selectedItem = (String) jComboBox2.getSelectedItem();
+    private void cbo_docentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_docentesActionPerformed
+        String selectedItem = (String) cbo_docentes.getSelectedItem();
         if (selectedItem.equals("Ingresar / Buscar")) {
-            Menu.setSelectedIndex(0);
+            Menu.setSelectedIndex(2);
         } else if (selectedItem.equals("Vizualizar")) {
-            Menu.setSelectedIndex(1);
+            Menu.setSelectedIndex(3);
         }
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_cbo_docentesActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    private void cbo_cursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_cursosActionPerformed
+        String selectedItem = (String) cbo_cursos.getSelectedItem();
+        if (selectedItem.equals("Ingresar / Buscar")) {
+            Menu.setSelectedIndex(4);
+        } else if (selectedItem.equals("Vizualizar")) {
+            Menu.setSelectedIndex(5);
+        }
+    }//GEN-LAST:event_cbo_cursosActionPerformed
 
     private void btn4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn4MouseMoved
         // TODO add your handling code here:
@@ -988,9 +1063,14 @@ public class interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn4MouseExited
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    private void cbo_materiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_materiasActionPerformed
+        String selectedItem = (String) cbo_materias.getSelectedItem();
+        if (selectedItem.equals("Ingresar / Buscar")) {
+            Menu.setSelectedIndex(6);
+        } else if (selectedItem.equals("Vizualizar")) {
+            Menu.setSelectedIndex(7);
+        }
+    }//GEN-LAST:event_cbo_materiasActionPerformed
 
     private void btn5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn5MouseMoved
         // TODO add your handling code here:
@@ -1004,9 +1084,14 @@ public class interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn5MouseExited
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    private void cbo_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_notasActionPerformed
+        String selectedItem = (String) cbo_notas.getSelectedItem();
+        if (selectedItem.equals("Ingresar / Buscar")) {
+            Menu.setSelectedIndex(8);
+        } else if (selectedItem.equals("Vizualizar")) {
+            Menu.setSelectedIndex(9);
+        }
+    }//GEN-LAST:event_cbo_notasActionPerformed
 
     private void btn6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn6MouseMoved
         // TODO add your handling code here:
@@ -1111,16 +1196,17 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn_LIMPIAR;
     private javax.swing.JPanel btn_MODIFICAR;
     private javax.swing.JPanel btn__ELIMINAR;
+    private javax.swing.JComboBox<String> cbo_alumnos;
+    private javax.swing.JComboBox<String> cbo_cursos;
+    private javax.swing.JComboBox<String> cbo_docentes;
+    private javax.swing.JComboBox<String> cbo_materias;
+    private javax.swing.JComboBox<String> cbo_notas;
     private javax.swing.JComboBox<String> cbxSexo;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -1133,22 +1219,36 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel jlb_encabezado1;
     private javax.swing.JLabel jlb_relleno1;
     private javax.swing.JLabel jlb_relleno2;
     private javax.swing.JLabel jlb_relleno3;
     private javax.swing.JPanel panel_btn;
+    private javax.swing.JPanel pnl_0_Ingreso_Alu;
+    private javax.swing.JPanel pnl_1_Tabla_Alu;
+    private javax.swing.JPanel pnl_2_Ingreso_Docnt;
+    private javax.swing.JPanel pnl_3_Tabla_Docnt;
+    private javax.swing.JPanel pnl_4_Ingreso_Cur;
+    private javax.swing.JPanel pnl_5_Tabla_Cur;
+    private javax.swing.JPanel pnl_6_Ingreso_Mat;
+    private javax.swing.JPanel pnl_7_Tabla_Mat;
+    private javax.swing.JPanel pnl_8_Ingreso_Not;
+    private javax.swing.JPanel pnl_9_Tabla_Not;
     public javax.swing.JTable tblAlumno;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCedula;
