@@ -37,19 +37,27 @@ public class interfaz extends javax.swing.JFrame {
         txtDiscapacidad.setText(null);
         txtObersevaciones.setText(null);
         cbxSexo.setSelectedIndex(0);
-        
-        
-        
-        
-        
+    }
+    
+    private void limpiarProfesor() {
+        txtId_pro.setText(null);
+        txtCedula_pro.setText(null);
+        txtApellido_pro.setText(null);
+        txtNombre_pro.setText(null);
+        txtDireccion_pro.setText(null);
+        txtEmail_pro.setText(null);
+        txtFecha_pro.setText(null);
+        txtDiscapacidad_pro.setText(null);
+        txtObersevaciones_pro.setText(null);
+        cbxSexo_pro.setSelectedIndex(0);
     }
 
     public interfaz() {
         initComponents();
         setLocationRelativeTo(null);
+        cargartablaProfesor();
         cargartabla();
-        
-        
+            
     }
    
 
@@ -118,36 +126,39 @@ public class interfaz extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jlb_relleno1 = new javax.swing.JLabel();
         pnl_2_Ingreso_Docnt = new javax.swing.JPanel();
-        txtId1 = new javax.swing.JTextField();
+        txtId_pro = new javax.swing.JTextField();
         btn_BUSCAR1 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
-        txtCedula1 = new javax.swing.JTextField();
-        txtNombre1 = new javax.swing.JTextField();
-        txtApellido1 = new javax.swing.JTextField();
-        txtDireccion1 = new javax.swing.JTextField();
-        txtEmail1 = new javax.swing.JTextField();
-        txtFecha1 = new javax.swing.JTextField();
-        txtDiscapacidad1 = new javax.swing.JTextField();
-        txtObersevaciones1 = new javax.swing.JTextField();
-        cbxSexo1 = new javax.swing.JComboBox<>();
-        btn_GUARDAR1 = new javax.swing.JPanel();
+        txtCedula_pro = new javax.swing.JTextField();
+        txtNombre_pro = new javax.swing.JTextField();
+        txtApellido_pro = new javax.swing.JTextField();
+        txtDireccion_pro = new javax.swing.JTextField();
+        txtEmail_pro = new javax.swing.JTextField();
+        txtFecha_pro = new javax.swing.JTextField();
+        txtDiscapacidad_pro = new javax.swing.JTextField();
+        txtObersevaciones_pro = new javax.swing.JTextField();
+        cbxSexo_pro = new javax.swing.JComboBox<>();
+        btn_GUARDAR_pro = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        btn_MODIFICAR1 = new javax.swing.JPanel();
+        btn_MODIFICAR_pro = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        btn__ELIMINAR1 = new javax.swing.JPanel();
+        btn__ELIMINAR_pro = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        btn_LIMPIAR1 = new javax.swing.JPanel();
+        btn_LIMPIAR_pro = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jlb_relleno4 = new javax.swing.JLabel();
         pnl_3_Tabla_Docnt = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblAlumno1 = new javax.swing.JTable();
+        tblProfesor = new javax.swing.JTable();
         jLabel13 = new javax.swing.JLabel();
+        btn_ELIMINAR_pro = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
         jlb_relleno5 = new javax.swing.JLabel();
         pnl_4_Ingreso_Mat = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -383,6 +394,11 @@ public class interfaz extends javax.swing.JFrame {
         txtId.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txtId.setForeground(new java.awt.Color(204, 204, 204));
         txtId.setBorder(null);
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
         pnl_0_Ingreso_Alu.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 112, 120, -1));
 
         txtCedula.setBackground(new java.awt.Color(25, 55, 113));
@@ -639,11 +655,16 @@ public class interfaz extends javax.swing.JFrame {
 
         pnl_2_Ingreso_Docnt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtId1.setBackground(new java.awt.Color(25, 55, 113));
-        txtId1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtId1.setForeground(new java.awt.Color(204, 204, 204));
-        txtId1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 112, 120, -1));
+        txtId_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtId_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtId_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtId_pro.setBorder(null);
+        txtId_pro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtId_proActionPerformed(evt);
+            }
+        });
+        pnl_2_Ingreso_Docnt.add(txtId_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 112, 120, -1));
 
         btn_BUSCAR1.setBackground(new java.awt.Color(35, 63, 111));
         btn_BUSCAR1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -666,187 +687,187 @@ public class interfaz extends javax.swing.JFrame {
 
         pnl_2_Ingreso_Docnt.add(btn_BUSCAR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 105, 40, 30));
 
-        txtCedula1.setBackground(new java.awt.Color(25, 55, 113));
-        txtCedula1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtCedula1.setForeground(new java.awt.Color(204, 204, 204));
-        txtCedula1.setBorder(null);
-        txtCedula1.addActionListener(new java.awt.event.ActionListener() {
+        txtCedula_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtCedula_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtCedula_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtCedula_pro.setBorder(null);
+        txtCedula_pro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCedula1ActionPerformed(evt);
+                txtCedula_proActionPerformed(evt);
             }
         });
-        pnl_2_Ingreso_Docnt.add(txtCedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 172, 193, -1));
+        pnl_2_Ingreso_Docnt.add(txtCedula_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 172, 193, -1));
 
-        txtNombre1.setBackground(new java.awt.Color(25, 55, 113));
-        txtNombre1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtNombre1.setForeground(new java.awt.Color(204, 204, 204));
-        txtNombre1.setBorder(null);
-        txtNombre1.setVerifyInputWhenFocusTarget(false);
-        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtNombre_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtNombre_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtNombre_pro.setBorder(null);
+        txtNombre_pro.setVerifyInputWhenFocusTarget(false);
+        txtNombre_pro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre1ActionPerformed(evt);
+                txtNombre_proActionPerformed(evt);
             }
         });
-        pnl_2_Ingreso_Docnt.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 230, 193, -1));
+        pnl_2_Ingreso_Docnt.add(txtNombre_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 230, 193, -1));
 
-        txtApellido1.setBackground(new java.awt.Color(25, 55, 113));
-        txtApellido1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtApellido1.setForeground(new java.awt.Color(204, 204, 204));
-        txtApellido1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtApellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 289, 193, -1));
+        txtApellido_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtApellido_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtApellido_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtApellido_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtApellido_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 289, 193, -1));
 
-        txtDireccion1.setBackground(new java.awt.Color(25, 55, 113));
-        txtDireccion1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtDireccion1.setForeground(new java.awt.Color(204, 204, 204));
-        txtDireccion1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 349, 193, -1));
+        txtDireccion_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtDireccion_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtDireccion_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtDireccion_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtDireccion_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 349, 193, -1));
 
-        txtEmail1.setBackground(new java.awt.Color(25, 55, 113));
-        txtEmail1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtEmail1.setForeground(new java.awt.Color(204, 204, 204));
-        txtEmail1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 112, 220, -1));
+        txtEmail_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtEmail_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtEmail_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtEmail_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtEmail_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 112, 220, -1));
 
-        txtFecha1.setBackground(new java.awt.Color(25, 55, 113));
-        txtFecha1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtFecha1.setForeground(new java.awt.Color(204, 204, 204));
-        txtFecha1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 172, 220, -1));
+        txtFecha_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtFecha_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtFecha_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtFecha_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtFecha_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 172, 220, -1));
 
-        txtDiscapacidad1.setBackground(new java.awt.Color(25, 55, 113));
-        txtDiscapacidad1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtDiscapacidad1.setForeground(new java.awt.Color(204, 204, 204));
-        txtDiscapacidad1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtDiscapacidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 234, 160, -1));
+        txtDiscapacidad_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtDiscapacidad_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtDiscapacidad_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtDiscapacidad_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtDiscapacidad_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 234, 160, -1));
 
-        txtObersevaciones1.setBackground(new java.awt.Color(25, 55, 113));
-        txtObersevaciones1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        txtObersevaciones1.setForeground(new java.awt.Color(204, 204, 204));
-        txtObersevaciones1.setBorder(null);
-        pnl_2_Ingreso_Docnt.add(txtObersevaciones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 289, 160, -1));
+        txtObersevaciones_pro.setBackground(new java.awt.Color(25, 55, 113));
+        txtObersevaciones_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txtObersevaciones_pro.setForeground(new java.awt.Color(204, 204, 204));
+        txtObersevaciones_pro.setBorder(null);
+        pnl_2_Ingreso_Docnt.add(txtObersevaciones_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 289, 160, -1));
 
-        cbxSexo1.setBackground(new java.awt.Color(25, 55, 113));
-        cbxSexo1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        cbxSexo1.setForeground(new java.awt.Color(204, 204, 204));
-        cbxSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
-        cbxSexo1.setBorder(null);
-        cbxSexo1.addActionListener(new java.awt.event.ActionListener() {
+        cbxSexo_pro.setBackground(new java.awt.Color(25, 55, 113));
+        cbxSexo_pro.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        cbxSexo_pro.setForeground(new java.awt.Color(204, 204, 204));
+        cbxSexo_pro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
+        cbxSexo_pro.setBorder(null);
+        cbxSexo_pro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxSexo1ActionPerformed(evt);
+                cbxSexo_proActionPerformed(evt);
             }
         });
-        pnl_2_Ingreso_Docnt.add(cbxSexo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 345, 210, -1));
+        pnl_2_Ingreso_Docnt.add(cbxSexo_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 345, 210, -1));
 
-        btn_GUARDAR1.setBackground(new java.awt.Color(37, 67, 117));
-        btn_GUARDAR1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_GUARDAR1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        btn_GUARDAR_pro.setBackground(new java.awt.Color(37, 67, 117));
+        btn_GUARDAR_pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_GUARDAR_pro.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                btn_GUARDAR1MouseMoved(evt);
+                btn_GUARDAR_proMouseMoved(evt);
             }
         });
-        btn_GUARDAR1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_GUARDAR_pro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_GUARDAR1MouseClicked(evt);
+                btn_GUARDAR_proMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_GUARDAR1MouseExited(evt);
+                btn_GUARDAR_proMouseExited(evt);
             }
         });
-        btn_GUARDAR1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_GUARDAR_pro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel33.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Guardar");
-        btn_GUARDAR1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+        btn_GUARDAR_pro.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guardar2.png"))); // NOI18N
-        btn_GUARDAR1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 0, -1, 40));
+        btn_GUARDAR_pro.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 0, -1, 40));
 
-        pnl_2_Ingreso_Docnt.add(btn_GUARDAR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 130, 40));
+        pnl_2_Ingreso_Docnt.add(btn_GUARDAR_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 130, 40));
 
-        btn_MODIFICAR1.setBackground(new java.awt.Color(37, 67, 117));
-        btn_MODIFICAR1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_MODIFICAR1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        btn_MODIFICAR_pro.setBackground(new java.awt.Color(37, 67, 117));
+        btn_MODIFICAR_pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_MODIFICAR_pro.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                btn_MODIFICAR1MouseMoved(evt);
+                btn_MODIFICAR_proMouseMoved(evt);
             }
         });
-        btn_MODIFICAR1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_MODIFICAR_pro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_MODIFICAR1MouseClicked(evt);
+                btn_MODIFICAR_proMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_MODIFICAR1MouseExited(evt);
+                btn_MODIFICAR_proMouseExited(evt);
             }
         });
-        btn_MODIFICAR1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_MODIFICAR_pro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel35.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("Modificar");
-        btn_MODIFICAR1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 7, 80, 30));
+        btn_MODIFICAR_pro.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 7, 80, 30));
 
         jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar2.png"))); // NOI18N
-        btn_MODIFICAR1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1, -1, 40));
+        btn_MODIFICAR_pro.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1, -1, 40));
 
-        pnl_2_Ingreso_Docnt.add(btn_MODIFICAR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 130, 40));
+        pnl_2_Ingreso_Docnt.add(btn_MODIFICAR_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 130, 40));
 
-        btn__ELIMINAR1.setBackground(new java.awt.Color(37, 67, 117));
-        btn__ELIMINAR1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn__ELIMINAR1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        btn__ELIMINAR_pro.setBackground(new java.awt.Color(37, 67, 117));
+        btn__ELIMINAR_pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn__ELIMINAR_pro.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                btn__ELIMINAR1MouseMoved(evt);
+                btn__ELIMINAR_proMouseMoved(evt);
             }
         });
-        btn__ELIMINAR1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn__ELIMINAR_pro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn__ELIMINAR1MouseClicked(evt);
+                btn__ELIMINAR_proMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn__ELIMINAR1MouseExited(evt);
+                btn__ELIMINAR_proMouseExited(evt);
             }
         });
-        btn__ELIMINAR1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn__ELIMINAR_pro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel37.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Eliminar");
-        btn__ELIMINAR1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+        btn__ELIMINAR_pro.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacho2.png"))); // NOI18N
-        btn__ELIMINAR1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
+        btn__ELIMINAR_pro.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
 
-        pnl_2_Ingreso_Docnt.add(btn__ELIMINAR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 40));
+        pnl_2_Ingreso_Docnt.add(btn__ELIMINAR_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 40));
 
-        btn_LIMPIAR1.setBackground(new java.awt.Color(37, 67, 117));
-        btn_LIMPIAR1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_LIMPIAR1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        btn_LIMPIAR_pro.setBackground(new java.awt.Color(37, 67, 117));
+        btn_LIMPIAR_pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_LIMPIAR_pro.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                btn_LIMPIAR1MouseMoved(evt);
+                btn_LIMPIAR_proMouseMoved(evt);
             }
         });
-        btn_LIMPIAR1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_LIMPIAR_pro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_LIMPIAR1MouseClicked(evt);
+                btn_LIMPIAR_proMouseClicked(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_LIMPIAR1MouseExited(evt);
+                btn_LIMPIAR_proMouseExited(evt);
             }
         });
-        btn_LIMPIAR1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btn_LIMPIAR_pro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("Limpiar");
-        btn_LIMPIAR1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+        btn_LIMPIAR_pro.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
 
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar.png"))); // NOI18N
-        btn_LIMPIAR1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
+        btn_LIMPIAR_pro.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
 
-        pnl_2_Ingreso_Docnt.add(btn_LIMPIAR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, 40));
+        pnl_2_Ingreso_Docnt.add(btn_LIMPIAR_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, 40));
 
         jLabel4.setText("Ingreso docente");
-        pnl_2_Ingreso_Docnt.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+        pnl_2_Ingreso_Docnt.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         jlb_relleno4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO5.jpeg"))); // NOI18N
         pnl_2_Ingreso_Docnt.add(jlb_relleno4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 11, 820, 500));
@@ -855,8 +876,8 @@ public class interfaz extends javax.swing.JFrame {
 
         pnl_3_Tabla_Docnt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblAlumno1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tblAlumno1.setModel(new javax.swing.table.DefaultTableModel(
+        tblProfesor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tblProfesor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -879,17 +900,44 @@ public class interfaz extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tblAlumno1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tblProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblAlumno1MouseClicked(evt);
+                tblProfesorMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(tblAlumno1);
+        jScrollPane2.setViewportView(tblProfesor);
 
         pnl_3_Tabla_Docnt.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 370));
 
         jLabel13.setText("T_Docentte");
         pnl_3_Tabla_Docnt.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+
+        btn_ELIMINAR_pro.setBackground(new java.awt.Color(37, 67, 117));
+        btn_ELIMINAR_pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_ELIMINAR_pro.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_ELIMINAR_proMouseMoved(evt);
+            }
+        });
+        btn_ELIMINAR_pro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ELIMINAR_proMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_ELIMINAR_proMouseExited(evt);
+            }
+        });
+        btn_ELIMINAR_pro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Bahnschrift", 0, 22)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel22.setText("  Eliminar");
+        btn_ELIMINAR_pro.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 8, -1, 40));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacho2.png"))); // NOI18N
+        btn_ELIMINAR_pro.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
+
+        pnl_3_Tabla_Docnt.add(btn_ELIMINAR_pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 210, 50));
 
         jlb_relleno5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO1.jpeg"))); // NOI18N
         pnl_3_Tabla_Docnt.add(jlb_relleno5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
@@ -1029,69 +1077,192 @@ public class interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn6MouseExited
 
-    private void tblAlumno1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAlumno1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tblAlumno1MouseClicked
+    private void tblProfesorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProfesorMouseClicked
+        try {
+            int fila = tblProfesor.getSelectedRow();
+            String id = tblProfesor.getValueAt(fila, 0).toString();
 
-    private void btn_LIMPIAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_LIMPIAR1MouseExited
+            PreparedStatement ps;
+            ResultSet rs;
 
-    private void btn_LIMPIAR1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_LIMPIAR1MouseClicked
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("SELECT * FROM v_profesor_consulta WHERE codigo_pro = ?");
+            ps.setString(1, id);
+            rs = ps.executeQuery();
 
-    private void btn_LIMPIAR1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_LIMPIAR1MouseMoved
+            while (rs.next()) {
+                txtId_pro.setText(String.valueOf(id).trim());
+                txtCedula_pro.setText(rs.getString("cedula_pro").trim());
+                txtApellido_pro.setText(rs.getString("apellido_pro").trim());
+                txtNombre_pro.setText(rs.getString("nombre_pro").trim());
+                txtDireccion_pro.setText(rs.getString("direccion_pro").trim());
+                txtEmail_pro.setText(rs.getString("email_pro").trim());
+                txtFecha_pro.setText(rs.getString("date_pro").trim());
+                txtDiscapacidad_pro.setText(rs.getString("discapacidad_pro").trim());
+                txtObersevaciones_pro.setText(rs.getString("oberservaciones_pro").trim());
+                cbxSexo_pro.setSelectedItem(rs.getString("sexo_pro").trim());
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_tblProfesorMouseClicked
 
-    private void btn__ELIMINAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR1MouseExited
+    private void btn_LIMPIAR_proMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_proMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn__ELIMINAR1MouseExited
+    }//GEN-LAST:event_btn_LIMPIAR_proMouseExited
 
-    private void btn__ELIMINAR1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn__ELIMINAR1MouseClicked
+    private void btn_LIMPIAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_proMouseClicked
+        limpiarProfesor();
+    }//GEN-LAST:event_btn_LIMPIAR_proMouseClicked
 
-    private void btn__ELIMINAR1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR1MouseMoved
+    private void btn_LIMPIAR_proMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_proMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn__ELIMINAR1MouseMoved
+    }//GEN-LAST:event_btn_LIMPIAR_proMouseMoved
 
-    private void btn_MODIFICAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR1MouseExited
+    private void btn__ELIMINAR_proMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_proMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_MODIFICAR1MouseExited
+    }//GEN-LAST:event_btn__ELIMINAR_proMouseExited
 
-    private void btn_MODIFICAR1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_MODIFICAR1MouseClicked
+    private void btn__ELIMINAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_proMouseClicked
+        String id = txtId_pro.getText();
 
-    private void btn_MODIFICAR1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_MODIFICAR1MouseMoved
+        Connection conectar = Cconexion.estblecerConexion();
 
-    private void btn_GUARDAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_GUARDAR1MouseExited
+        try
+        {
 
-    private void btn_GUARDAR1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_GUARDAR1MouseClicked
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_pro ?");
+            ps.setString(1, txtId_pro.getText());
 
-    private void btn_GUARDAR1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_GUARDAR1MouseMoved
+            int res = ps.executeUpdate();
 
-    private void cbxSexo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxSexo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxSexo1ActionPerformed
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarProfesor();
+                cargartablaProfesor();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarProfesor();
+                cargartablaProfesor();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_btn__ELIMINAR_proMouseClicked
 
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+    private void btn__ELIMINAR_proMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_proMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    }//GEN-LAST:event_btn__ELIMINAR_proMouseMoved
 
-    private void txtCedula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedula1ActionPerformed
+    private void btn_MODIFICAR_proMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_proMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCedula1ActionPerformed
+    }//GEN-LAST:event_btn_MODIFICAR_proMouseExited
+
+    private void btn_MODIFICAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_proMouseClicked
+        String id = txtId_pro.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_modificar_pro ?,?,?,?,?,?,?,?,?,?");
+            ps.setString(1, txtId_pro.getText());
+            ps.setString(2, txtCedula_pro.getText());
+            ps.setString(3, txtApellido_pro.getText());
+            ps.setString(4, txtNombre_pro.getText());
+            ps.setString(5, txtDireccion_pro.getText());
+            ps.setString(6, txtEmail_pro.getText());
+            ps.setDate(7, java.sql.Date.valueOf(txtFecha_pro.getText()));
+            ps.setString(8, txtDiscapacidad_pro.getText());
+            ps.setString(9, txtObersevaciones_pro.getText());
+            ps.setString(10, cbxSexo_pro.getSelectedItem().toString());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Modfificado");
+                limpiarProfesor();
+                cargartablaProfesor();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al modificar registro");
+                limpiarProfesor();
+                cargartablaProfesor();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_btn_MODIFICAR_proMouseClicked
+
+    private void btn_MODIFICAR_proMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_proMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_MODIFICAR_proMouseMoved
+
+    private void btn_GUARDAR_proMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_proMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GUARDAR_proMouseExited
+
+    private void btn_GUARDAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_proMouseClicked
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_ingresar_pro ?,?,?,?,?,?,?,?,?,?");
+            ps.setString(1, txtId_pro.getText());
+            ps.setString(2, txtCedula_pro.getText());
+            ps.setString(3, txtApellido_pro.getText());
+            ps.setString(4, txtNombre_pro.getText());
+            ps.setString(5, txtDireccion_pro.getText());
+            ps.setString(6, txtEmail_pro.getText());
+            ps.setDate(7, java.sql.Date.valueOf(txtFecha_pro.getText()));
+            ps.setString(8, txtDiscapacidad_pro.getText());
+            ps.setString(9, txtObersevaciones_pro.getText());
+            ps.setString(10, cbxSexo_pro.getSelectedItem().toString());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                limpiarProfesor();
+                cargartablaProfesor();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarProfesor();
+                cargartablaProfesor()   ;
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_btn_GUARDAR_proMouseClicked
+
+    private void btn_GUARDAR_proMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_proMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GUARDAR_proMouseMoved
+
+    private void cbxSexo_proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxSexo_proActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxSexo_proActionPerformed
+
+    private void txtNombre_proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre_proActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre_proActionPerformed
+
+    private void txtCedula_proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedula_proActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCedula_proActionPerformed
 
     private void btn_BUSCAR1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BUSCAR1MouseExited
         // TODO add your handling code here:
@@ -1159,7 +1330,7 @@ public class interfaz extends javax.swing.JFrame {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                txtId.setText(String.valueOf(id));
+                txtId.setText(String.valueOf(id).trim());
                 txtCedula.setText(rs.getString("cedula_alu").trim());
                 txtApellido.setText(rs.getString("apellido_alu").trim());
                 txtNombre.setText(rs.getString("nombre_alu").trim());
@@ -1373,6 +1544,53 @@ public class interfaz extends javax.swing.JFrame {
         btn_BUSCAR.setBackground(new Color(108,149,196));
     }//GEN-LAST:event_btn_BUSCARMouseMoved
 
+    private void txtId_proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtId_proActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtId_proActionPerformed
+
+    private void btn_ELIMINAR_proMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_proMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ELIMINAR_proMouseMoved
+
+    private void btn_ELIMINAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_proMouseClicked
+    String id = txtId_pro.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_pro ?");
+            ps.setString(1, txtId_pro.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarProfesor();
+                cargartablaProfesor();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al modificar registro");
+                limpiarProfesor();
+                cargartablaProfesor();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_btn_ELIMINAR_proMouseClicked
+
+    private void btn_ELIMINAR_proMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_proMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ELIMINAR_proMouseExited
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -1387,6 +1605,40 @@ public class interfaz extends javax.swing.JFrame {
         {
             Connection conectar = Cconexion.estblecerConexion();
             ps = conectar.prepareStatement("exec sp_seleccion_alu");
+            rs = ps.executeQuery();
+            rsmd = rs.getMetaData();
+            columnas = rsmd.getColumnCount();
+
+            while (rs.next())
+            {
+                Object[] fila = new Object[columnas];
+                for (int indice = 0; indice < columnas; indice++)
+                {
+                    fila[indice] = rs.getObject(indice + 1);
+                }
+                modeloTabla.addRow(fila);
+            }
+
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }
+    
+    private void cargartablaProfesor() {
+        DefaultTableModel modeloTabla = (DefaultTableModel) tblProfesor.getModel();
+        modeloTabla.setRowCount(0);
+
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+
+        int columnas;
+
+        try
+        {
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("exec sp_seleccion_pro");
             rs = ps.executeQuery();
             rsmd = rs.getMetaData();
             columnas = rsmd.getColumnCount();
@@ -1460,20 +1712,21 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn_BUSCAR;
     private javax.swing.JPanel btn_BUSCAR1;
     private javax.swing.JPanel btn_ELIMINAR2;
+    private javax.swing.JPanel btn_ELIMINAR_pro;
     private javax.swing.JPanel btn_GUARDAR;
-    private javax.swing.JPanel btn_GUARDAR1;
+    private javax.swing.JPanel btn_GUARDAR_pro;
     private javax.swing.JPanel btn_LIMPIAR;
-    private javax.swing.JPanel btn_LIMPIAR1;
+    private javax.swing.JPanel btn_LIMPIAR_pro;
     private javax.swing.JPanel btn_MODIFICAR;
-    private javax.swing.JPanel btn_MODIFICAR1;
+    private javax.swing.JPanel btn_MODIFICAR_pro;
     private javax.swing.JPanel btn__ELIMINAR;
-    private javax.swing.JPanel btn__ELIMINAR1;
+    private javax.swing.JPanel btn__ELIMINAR_pro;
     private javax.swing.JComboBox<String> cbo_alumnos;
     private javax.swing.JComboBox<String> cbo_docentes;
     private javax.swing.JComboBox<String> cbo_materias;
     private javax.swing.JComboBox<String> cbo_notas;
     private javax.swing.JComboBox<String> cbxSexo;
-    private javax.swing.JComboBox<String> cbxSexo1;
+    private javax.swing.JComboBox<String> cbxSexo_pro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1488,8 +1741,10 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -1528,24 +1783,24 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_6_Ingreso_Not;
     private javax.swing.JPanel pnl_7_Tabla_Not;
     public javax.swing.JTable tblAlumno;
-    public javax.swing.JTable tblAlumno1;
+    public javax.swing.JTable tblProfesor;
     private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtApellido1;
+    private javax.swing.JTextField txtApellido_pro;
     private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtCedula1;
+    private javax.swing.JTextField txtCedula_pro;
     private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtDireccion1;
+    private javax.swing.JTextField txtDireccion_pro;
     private javax.swing.JTextField txtDiscapacidad;
-    private javax.swing.JTextField txtDiscapacidad1;
+    private javax.swing.JTextField txtDiscapacidad_pro;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtEmail1;
+    private javax.swing.JTextField txtEmail_pro;
     private javax.swing.JTextField txtFecha;
-    private javax.swing.JTextField txtFecha1;
+    private javax.swing.JTextField txtFecha_pro;
     private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtId1;
+    private javax.swing.JTextField txtId_pro;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre1;
+    private javax.swing.JTextField txtNombre_pro;
     private javax.swing.JTextField txtObersevaciones;
-    private javax.swing.JTextField txtObersevaciones1;
+    private javax.swing.JTextField txtObersevaciones_pro;
     // End of variables declaration//GEN-END:variables
 }
