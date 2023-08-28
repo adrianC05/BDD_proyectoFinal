@@ -197,6 +197,11 @@ public class interfaz extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         txt_observaciones_mat_NOTA = new javax.swing.JTextArea();
+        txt_promedio_nota = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         txt_cod_mat_NOTA = new javax.swing.JTextField();
         txt_cod_prof_NOTA = new javax.swing.JTextField();
         txt_cod_alumno_NOTAS = new javax.swing.JTextField();
@@ -1277,6 +1282,38 @@ public class interfaz extends javax.swing.JFrame {
 
         pnl_6_Ingreso_Not.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 675, 60));
 
+        txt_promedio_nota.setBackground(new java.awt.Color(25, 55, 113));
+        txt_promedio_nota.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        txt_promedio_nota.setForeground(new java.awt.Color(204, 204, 204));
+        txt_promedio_nota.setText("promedio");
+        txt_promedio_nota.setBorder(null);
+        txt_promedio_nota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_promedio_notaActionPerformed(evt);
+            }
+        });
+        pnl_6_Ingreso_Not.add(txt_promedio_nota, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 160, -1));
+
+        jPanel2.setBackground(new java.awt.Color(25, 55, 113));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Bahnschrift", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setText("PROMEDIO :");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 10, 90, 30));
+
+        pnl_6_Ingreso_Not.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 270, 180, 42));
+
+        jPanel1.setBackground(new java.awt.Color(64, 90, 133));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Bahnschrift", 0, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setText("PROMEDIO :");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 10, 90, 30));
+
+        pnl_6_Ingreso_Not.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 270, 143, 42));
+
         txt_cod_mat_NOTA.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_mat_NOTA.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_mat_NOTA.setForeground(new java.awt.Color(204, 204, 204));
@@ -2165,6 +2202,10 @@ public class interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_cod_mat_NOTAActionPerformed
 
+    private void txt_promedio_notaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_promedio_notaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_promedio_notaActionPerformed
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -2311,6 +2352,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -2334,6 +2376,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -2359,6 +2402,8 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2420,5 +2465,6 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField txt_nota3;
     private javax.swing.JTextArea txt_observaciones_mat;
     private javax.swing.JTextArea txt_observaciones_mat_NOTA;
+    private javax.swing.JTextField txt_promedio_nota;
     // End of variables declaration//GEN-END:variables
 }
