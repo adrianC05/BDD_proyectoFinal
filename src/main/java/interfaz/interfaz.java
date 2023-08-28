@@ -1310,7 +1310,7 @@ public class interfaz extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Bahnschrift", 0, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("PROMEDIO :");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 10, 90, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 90, 30));
 
         pnl_6_Ingreso_Not.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 270, 143, 42));
 
