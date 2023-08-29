@@ -38,7 +38,7 @@ public class interfaz extends javax.swing.JFrame {
         txtObersevaciones.setText(null);
         cbxSexo.setSelectedIndex(0);
     }
-    
+
     private void limpiarProfesor() {
         txtId_pro.setText(null);
         txtCedula_pro.setText(null);
@@ -52,14 +52,39 @@ public class interfaz extends javax.swing.JFrame {
         cbxSexo_pro.setSelectedIndex(0);
     }
 
+    private void limpiarMateria() {
+        txt_cod_mat.setText(null);
+        txt_nombre_mat.setText(null);
+        txt_observaciones_mat.setText(null);
+        txt_fecha_mat.setText(null);
+        txt_horas_mat.setText(null);
+        txt_creditos_mat.setText(null);
+        txt_malla_mat.setText(null);
+        txt_descripcion_mat.setText(null);
+    }
+    
+    private void limpiarNota() {
+        txt_cod_not.setText(null);
+        txt_nota1.setText(null);
+        txt_nota2.setText(null);
+        txt_nota3.setText(null);
+        txt_promedio_nota.setText(null);
+        txt_fecha_not.setText(null);
+        txt_cod_alumno_NOTAS.setText(null);
+        txt_cod_prof_NOTA.setText(null);
+        txt_cod_mat_NOTA.setText(null);
+        txt_observaciones_mat_NOTA.setText(null);
+    }
+
     public interfaz() {
         initComponents();
         setLocationRelativeTo(null);
         cargartablaProfesor();
+        cargartablaMateria();
+        cargartablaNota();
         cargartabla();
-            
+
     }
-   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -192,6 +217,8 @@ public class interfaz extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tblMateria = new javax.swing.JTable();
         jlb_relleno8 = new javax.swing.JLabel();
         pnl_6_Ingreso_Not = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
@@ -216,6 +243,8 @@ public class interfaz extends javax.swing.JFrame {
         btn_ELIMINAR_not = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tblNota = new javax.swing.JTable();
         jlb_relleno9 = new javax.swing.JLabel();
         jlb_relleno2 = new javax.swing.JLabel();
 
@@ -225,7 +254,7 @@ public class interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlb_encabezado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ENCABEZADO1.jpeg"))); // NOI18N
-        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 160));
+        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 100));
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1018,7 +1047,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_descripcion_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_descripcion_mat.setForeground(new java.awt.Color(204, 204, 204));
         txt_descripcion_mat.setRows(5);
-        txt_descripcion_mat.setText("materia\n");
         jScrollPane4.setViewportView(txt_descripcion_mat);
 
         pnl_4_Ingreso_Mat.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 330, 300, 60));
@@ -1028,7 +1056,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_observaciones_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_observaciones_mat.setForeground(new java.awt.Color(204, 204, 204));
         txt_observaciones_mat.setRows(5);
-        txt_observaciones_mat.setText("OBSERVACIONES\n");
         jScrollPane3.setViewportView(txt_observaciones_mat);
 
         pnl_4_Ingreso_Mat.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 300, 70));
@@ -1036,7 +1063,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_malla_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_malla_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_malla_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_malla_mat.setText("malla materia");
         txt_malla_mat.setBorder(null);
         txt_malla_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1048,7 +1074,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_creditos_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_creditos_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_creditos_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_creditos_mat.setText("crdt materia");
         txt_creditos_mat.setBorder(null);
         txt_creditos_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1060,7 +1085,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_nombre_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_nombre_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_nombre_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_nombre_mat.setText("nombre materia");
         txt_nombre_mat.setBorder(null);
         txt_nombre_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1072,7 +1096,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_horas_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_horas_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_horas_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_horas_mat.setText("N horas");
         txt_horas_mat.setBorder(null);
         txt_horas_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1084,7 +1107,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_fecha_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_fecha_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_fecha_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_fecha_mat.setText("fecha materia");
         txt_fecha_mat.setBorder(null);
         txt_fecha_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1096,7 +1118,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_cod_mat.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_mat.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_mat.setForeground(new java.awt.Color(204, 204, 204));
-        txt_cod_mat.setText("COD MATERIA");
         txt_cod_mat.setBorder(null);
         txt_cod_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1259,6 +1280,39 @@ public class interfaz extends javax.swing.JFrame {
         jLabel56.setText("TABLA MATERIAS");
         pnl_5_Tabla_Mat.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 190, -1));
 
+        tblMateria.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tblMateria.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nombre", "Observaciones", "Fecha", "No. de Horas", "Creditos", "Malla", "Descripcion"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblMateria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblMateriaMouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(tblMateria);
+
+        pnl_5_Tabla_Mat.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 370));
+
         jlb_relleno8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO1.jpeg"))); // NOI18N
         pnl_5_Tabla_Mat.add(jlb_relleno8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
 
@@ -1277,7 +1331,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_observaciones_mat_NOTA.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_observaciones_mat_NOTA.setForeground(new java.awt.Color(204, 204, 204));
         txt_observaciones_mat_NOTA.setRows(5);
-        txt_observaciones_mat_NOTA.setText("OBSERVACIONES\n");
         jScrollPane5.setViewportView(txt_observaciones_mat_NOTA);
 
         pnl_6_Ingreso_Not.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 675, 60));
@@ -1285,7 +1338,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_promedio_nota.setBackground(new java.awt.Color(25, 55, 113));
         txt_promedio_nota.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_promedio_nota.setForeground(new java.awt.Color(204, 204, 204));
-        txt_promedio_nota.setText("promedio");
         txt_promedio_nota.setBorder(null);
         txt_promedio_nota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1317,7 +1369,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_cod_mat_NOTA.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_mat_NOTA.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_mat_NOTA.setForeground(new java.awt.Color(204, 204, 204));
-        txt_cod_mat_NOTA.setText("COD MATERIA");
         txt_cod_mat_NOTA.setBorder(null);
         txt_cod_mat_NOTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1329,7 +1380,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_cod_prof_NOTA.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_prof_NOTA.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_prof_NOTA.setForeground(new java.awt.Color(204, 204, 204));
-        txt_cod_prof_NOTA.setText("COD PROFESOR");
         txt_cod_prof_NOTA.setBorder(null);
         txt_cod_prof_NOTA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1341,7 +1391,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_cod_alumno_NOTAS.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_alumno_NOTAS.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_alumno_NOTAS.setForeground(new java.awt.Color(204, 204, 204));
-        txt_cod_alumno_NOTAS.setText("COD ALUMNO");
         txt_cod_alumno_NOTAS.setBorder(null);
         txt_cod_alumno_NOTAS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1353,7 +1402,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_fecha_not.setBackground(new java.awt.Color(25, 55, 113));
         txt_fecha_not.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_fecha_not.setForeground(new java.awt.Color(204, 204, 204));
-        txt_fecha_not.setText("fecha");
         txt_fecha_not.setBorder(null);
         txt_fecha_not.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1365,7 +1413,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_nota3.setBackground(new java.awt.Color(25, 55, 113));
         txt_nota3.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_nota3.setForeground(new java.awt.Color(204, 204, 204));
-        txt_nota3.setText("n3");
         txt_nota3.setBorder(null);
         txt_nota3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1377,7 +1424,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_nota2.setBackground(new java.awt.Color(25, 55, 113));
         txt_nota2.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_nota2.setForeground(new java.awt.Color(204, 204, 204));
-        txt_nota2.setText("n2");
         txt_nota2.setBorder(null);
         txt_nota2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1389,7 +1435,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_nota1.setBackground(new java.awt.Color(25, 55, 113));
         txt_nota1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_nota1.setForeground(new java.awt.Color(204, 204, 204));
-        txt_nota1.setText("n1");
         txt_nota1.setBorder(null);
         txt_nota1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1401,7 +1446,6 @@ public class interfaz extends javax.swing.JFrame {
         txt_cod_not.setBackground(new java.awt.Color(25, 55, 113));
         txt_cod_not.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         txt_cod_not.setForeground(new java.awt.Color(204, 204, 204));
-        txt_cod_not.setText("COD NOTA");
         txt_cod_not.setBorder(null);
         txt_cod_not.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1450,6 +1494,39 @@ public class interfaz extends javax.swing.JFrame {
 
         pnl_7_Tabla_Not.add(btn_ELIMINAR_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 210, 50));
 
+        tblNota.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        tblNota.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Codigo", "Nota 1", "Nota 2", "Nota 3", "Promedio", "Oberservaciones", "Alumno", "Profesor", "Materia", "Fecha"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblNota.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblNotaMouseClicked(evt);
+            }
+        });
+        jScrollPane7.setViewportView(tblNota);
+
+        pnl_7_Tabla_Not.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 370));
+
         jlb_relleno9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO1.jpeg"))); // NOI18N
         pnl_7_Tabla_Not.add(jlb_relleno9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 820, 520));
 
@@ -1476,52 +1553,58 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn3MouseClicked
 
     private void btn1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseMoved
-        btn1.setBackground(new Color(108,149,196));
+        btn1.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn1MouseMoved
 
     private void btn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn1MouseExited
-        btn1.setBackground(new Color(35,63,111));
+        btn1.setBackground(new Color(35, 63, 111));
     }//GEN-LAST:event_btn1MouseExited
 
     private void btn2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseMoved
-        btn2.setBackground(new Color(108,149,196));
+        btn2.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn2MouseMoved
 
     private void btn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn2MouseExited
-        btn2.setBackground(new Color(35,63,111));
+        btn2.setBackground(new Color(35, 63, 111));
     }//GEN-LAST:event_btn2MouseExited
 
     private void btn3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseMoved
-        btn3.setBackground(new Color(108,149,196));
+        btn3.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn3MouseMoved
 
     private void btn3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn3MouseExited
-        btn3.setBackground(new Color(35,63,111));
+        btn3.setBackground(new Color(35, 63, 111));
     }//GEN-LAST:event_btn3MouseExited
 
     private void cbo_alumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_alumnosActionPerformed
         String selectedItem = (String) cbo_alumnos.getSelectedItem();
-        if (selectedItem.equals("Ingresar / Buscar")) {
+        if (selectedItem.equals("Ingresar / Buscar"))
+        {
             Menu.setSelectedIndex(0);
-        } else if (selectedItem.equals("Vizualizar")) {
+        } else if (selectedItem.equals("Vizualizar"))
+        {
             Menu.setSelectedIndex(1);
         }
     }//GEN-LAST:event_cbo_alumnosActionPerformed
 
     private void cbo_docentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_docentesActionPerformed
         String selectedItem = (String) cbo_docentes.getSelectedItem();
-        if (selectedItem.equals("Ingresar / Buscar")) {
+        if (selectedItem.equals("Ingresar / Buscar"))
+        {
             Menu.setSelectedIndex(2);
-        } else if (selectedItem.equals("Vizualizar")) {
+        } else if (selectedItem.equals("Vizualizar"))
+        {
             Menu.setSelectedIndex(3);
         }
     }//GEN-LAST:event_cbo_docentesActionPerformed
 
     private void cbo_materiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_materiasActionPerformed
         String selectedItem = (String) cbo_materias.getSelectedItem();
-        if (selectedItem.equals("Ingresar / Buscar")) {
+        if (selectedItem.equals("Ingresar / Buscar"))
+        {
             Menu.setSelectedIndex(4);
-        } else if (selectedItem.equals("Vizualizar")) {
+        } else if (selectedItem.equals("Vizualizar"))
+        {
             Menu.setSelectedIndex(5);
         }
     }//GEN-LAST:event_cbo_materiasActionPerformed
@@ -1540,9 +1623,11 @@ public class interfaz extends javax.swing.JFrame {
 
     private void cbo_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_notasActionPerformed
         String selectedItem = (String) cbo_notas.getSelectedItem();
-        if (selectedItem.equals("Ingresar / Buscar")) {
+        if (selectedItem.equals("Ingresar / Buscar"))
+        {
             Menu.setSelectedIndex(6);
-        } else if (selectedItem.equals("Vizualizar")) {
+        } else if (selectedItem.equals("Vizualizar"))
+        {
             Menu.setSelectedIndex(7);
             //carriongaay
         }
@@ -1561,7 +1646,8 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn6MouseExited
 
     private void tblProfesorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProfesorMouseClicked
-        try {
+        try
+        {
             int fila = tblProfesor.getSelectedRow();
             String id = tblProfesor.getValueAt(fila, 0).toString();
 
@@ -1573,7 +1659,8 @@ public class interfaz extends javax.swing.JFrame {
             ps.setString(1, id);
             rs = ps.executeQuery();
 
-            while (rs.next()) {
+            while (rs.next())
+            {
                 txtId_pro.setText(String.valueOf(id).trim());
                 txtCedula_pro.setText(rs.getString("cedula_pro").trim());
                 txtApellido_pro.setText(rs.getString("apellido_pro").trim());
@@ -1585,7 +1672,8 @@ public class interfaz extends javax.swing.JFrame {
                 txtObersevaciones_pro.setText(rs.getString("oberservaciones_pro").trim());
                 cbxSexo_pro.setSelectedItem(rs.getString("sexo_pro").trim());
             }
-        } catch (SQLException e) {
+        } catch (SQLException e)
+        {
             JOptionPane.showMessageDialog(null, e.toString());
         }
     }//GEN-LAST:event_tblProfesorMouseClicked
@@ -1613,7 +1701,6 @@ public class interfaz extends javax.swing.JFrame {
 
         try
         {
-
             PreparedStatement ps = conectar.prepareStatement("exec sp_delete_pro ?");
             ps.setString(1, txtId_pro.getText());
 
@@ -1722,7 +1809,7 @@ public class interfaz extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(null, "Error al guardar registro");
                 limpiarProfesor();
-                cargartablaProfesor()   ;
+                cargartablaProfesor();
             }
             conectar.close();
         } catch (Exception e)
@@ -1760,7 +1847,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_BUSCAR1MouseMoved
 
     private void btn_ELIMINAR2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR2MouseExited
-        btn_ELIMINAR2.setBackground(new Color(37,67,117));
+        btn_ELIMINAR2.setBackground(new Color(37, 67, 117));
     }//GEN-LAST:event_btn_ELIMINAR2MouseExited
 
     private void btn_ELIMINAR2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR2MouseClicked
@@ -1795,12 +1882,13 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ELIMINAR2MouseClicked
 
     private void btn_ELIMINAR2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR2MouseMoved
-        btn_ELIMINAR2.setBackground(new Color(192,0,0));
+        btn_ELIMINAR2.setBackground(new Color(192, 0, 0));
     }//GEN-LAST:event_btn_ELIMINAR2MouseMoved
 
     private void tblAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAlumnoMouseClicked
 
-        try {
+        try
+        {
             int fila = tblAlumno.getSelectedRow();
             String id = tblAlumno.getValueAt(fila, 0).toString();
 
@@ -1812,7 +1900,8 @@ public class interfaz extends javax.swing.JFrame {
             ps.setString(1, id);
             rs = ps.executeQuery();
 
-            while (rs.next()) {
+            while (rs.next())
+            {
                 txtId.setText(String.valueOf(id).trim());
                 txtCedula.setText(rs.getString("cedula_alu").trim());
                 txtApellido.setText(rs.getString("apellido_alu").trim());
@@ -1824,13 +1913,14 @@ public class interfaz extends javax.swing.JFrame {
                 txtObersevaciones.setText(rs.getString("oberservaciones_alu").trim());
                 cbxSexo.setSelectedItem(rs.getString("sexo_alu").trim());
             }
-        } catch (SQLException e) {
+        } catch (SQLException e)
+        {
             JOptionPane.showMessageDialog(null, e.toString());
         }
     }//GEN-LAST:event_tblAlumnoMouseClicked
 
     private void btn_GUARDARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDARMouseExited
-        btn_GUARDAR.setBackground(new Color(37,67,117));
+        btn_GUARDAR.setBackground(new Color(37, 67, 117));
     }//GEN-LAST:event_btn_GUARDARMouseExited
 
     private void btn_GUARDARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDARMouseClicked
@@ -1872,12 +1962,12 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_GUARDARMouseClicked
 
     private void btn_GUARDARMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDARMouseMoved
-        btn_GUARDAR.setBackground(new Color(0,176,80));
+        btn_GUARDAR.setBackground(new Color(0, 176, 80));
 
     }//GEN-LAST:event_btn_GUARDARMouseMoved
 
     private void btn_MODIFICARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICARMouseExited
-        btn_MODIFICAR.setBackground(new Color(37,67,117));
+        btn_MODIFICAR.setBackground(new Color(37, 67, 117));
     }//GEN-LAST:event_btn_MODIFICARMouseExited
 
     private void btn_MODIFICARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICARMouseClicked
@@ -1921,11 +2011,11 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_MODIFICARMouseClicked
 
     private void btn_MODIFICARMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICARMouseMoved
-        btn_MODIFICAR.setBackground(new Color(108,149,196));
+        btn_MODIFICAR.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn_MODIFICARMouseMoved
 
     private void btn__ELIMINARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINARMouseExited
-        btn__ELIMINAR.setBackground(new Color(37,67,117));
+        btn__ELIMINAR.setBackground(new Color(37, 67, 117));
     }//GEN-LAST:event_btn__ELIMINARMouseExited
 
     private void btn__ELIMINARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINARMouseClicked
@@ -1960,11 +2050,11 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn__ELIMINARMouseClicked
 
     private void btn__ELIMINARMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINARMouseMoved
-        btn__ELIMINAR.setBackground(new Color(192,0,0));
+        btn__ELIMINAR.setBackground(new Color(192, 0, 0));
     }//GEN-LAST:event_btn__ELIMINARMouseMoved
 
     private void btn_LIMPIARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIARMouseExited
-        btn_LIMPIAR.setBackground(new Color(37,67,117));
+        btn_LIMPIAR.setBackground(new Color(37, 67, 117));
     }//GEN-LAST:event_btn_LIMPIARMouseExited
 
     private void btn_LIMPIARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIARMouseClicked
@@ -1972,7 +2062,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_LIMPIARMouseClicked
 
     private void btn_LIMPIARMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIARMouseMoved
-        btn_LIMPIAR.setBackground(new Color(108,149,196));
+        btn_LIMPIAR.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn_LIMPIARMouseMoved
 
     private void cbxSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxSexoActionPerformed
@@ -1988,7 +2078,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCedulaActionPerformed
 
     private void btn_BUSCARMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BUSCARMouseExited
-        btn_BUSCAR.setBackground(new Color(35,63,111));
+        btn_BUSCAR.setBackground(new Color(35, 63, 111));
     }//GEN-LAST:event_btn_BUSCARMouseExited
 
     private void btn_BUSCARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BUSCARMouseClicked
@@ -2024,7 +2114,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_BUSCARMouseClicked
 
     private void btn_BUSCARMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_BUSCARMouseMoved
-        btn_BUSCAR.setBackground(new Color(108,149,196));
+        btn_BUSCAR.setBackground(new Color(108, 149, 196));
     }//GEN-LAST:event_btn_BUSCARMouseMoved
 
     private void txtId_proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtId_proActionPerformed
@@ -2036,7 +2126,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ELIMINAR_proMouseMoved
 
     private void btn_ELIMINAR_proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_proMouseClicked
-    String id = txtId_pro.getText();
+        String id = txtId_pro.getText();
 
         Connection conectar = Cconexion.estblecerConexion();
 
@@ -2103,7 +2193,41 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_GUARDAR_matMouseMoved
 
     private void btn_GUARDAR_matMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_matMouseClicked
-        // TODO add your handling code here:
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_ingresar_mat ?,?,?,?,?,?,?,?");
+            ps.setString(1, txt_cod_mat.getText());
+            ps.setString(2, txt_nombre_mat.getText());
+            ps.setString(3, txt_observaciones_mat.getText());
+            ps.setDate(4, java.sql.Date.valueOf(txt_fecha_mat.getText()));            
+            ps.setString(5, txt_horas_mat.getText());
+            ps.setString(6, txt_creditos_mat.getText());
+            ps.setString(7, txt_malla_mat.getText());
+            ps.setString(8, txt_descripcion_mat.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                limpiarMateria();
+                cargartablaMateria();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarMateria();
+                cargartablaMateria();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+        
+        
     }//GEN-LAST:event_btn_GUARDAR_matMouseClicked
 
     private void btn_GUARDAR_matMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_matMouseExited
@@ -2115,7 +2239,41 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_MODIFICAR_matMouseMoved
 
     private void btn_MODIFICAR_matMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_matMouseClicked
-        // TODO add your handling code here:
+        String id = txt_cod_mat.getText();
+        
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_modificar_mat ?,?,?,?,?,?,?,?");
+            ps.setString(1, txt_cod_mat.getText());
+            ps.setString(2, txt_nombre_mat.getText());
+            ps.setString(3, txt_observaciones_mat.getText());
+            ps.setDate(4, java.sql.Date.valueOf(txt_fecha_mat.getText()));            
+            ps.setString(5, txt_horas_mat.getText());
+            ps.setString(6, txt_creditos_mat.getText());
+            ps.setString(7, txt_malla_mat.getText());
+            ps.setString(8, txt_descripcion_mat.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro modificado");
+                limpiarMateria();
+                cargartablaMateria();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al modificar registro");
+                limpiarMateria();
+                cargartablaMateria();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn_MODIFICAR_matMouseClicked
 
     private void btn_MODIFICAR_matMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_matMouseExited
@@ -2127,7 +2285,33 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn__ELIMINAR_matMouseMoved
 
     private void btn__ELIMINAR_matMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_matMouseClicked
-        // TODO add your handling code here:
+        String id = txt_cod_mat.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_mat ?");
+            ps.setString(1, txt_cod_mat.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarMateria();
+                cargartablaMateria();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarMateria();
+                cargartablaMateria();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn__ELIMINAR_matMouseClicked
 
     private void btn__ELIMINAR_matMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_matMouseExited
@@ -2139,7 +2323,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_LIMPIAR_matMouseMoved
 
     private void btn_LIMPIAR_matMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_matMouseClicked
-        // TODO add your handling code here:
+        limpiarMateria();
     }//GEN-LAST:event_btn_LIMPIAR_matMouseClicked
 
     private void btn_LIMPIAR_matMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_matMouseExited
@@ -2151,7 +2335,33 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ELIMINAR_matMouseMoved
 
     private void btn_ELIMINAR_matMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_matMouseClicked
-        // TODO add your handling code here:
+        String id = txt_cod_mat.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_mat ?");
+            ps.setString(1, txt_cod_mat.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarMateria();
+                cargartablaMateria();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarMateria();
+                cargartablaMateria();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn_ELIMINAR_matMouseClicked
 
     private void btn_ELIMINAR_matMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_matMouseExited
@@ -2206,6 +2416,70 @@ public class interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_promedio_notaActionPerformed
 
+    private void tblMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMateriaMouseClicked
+        try
+        {
+            int fila = tblMateria.getSelectedRow();
+            String id = tblMateria.getValueAt(fila, 0).toString();
+
+            PreparedStatement ps;
+            ResultSet rs;
+
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("SELECT * FROM v_materia_consulta WHERE codigo_mat = ?");
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+
+            while (rs.next())
+            {
+                txt_cod_mat.setText(String.valueOf(id).trim());
+                txt_nombre_mat.setText(rs.getString("nombre_mat").trim());
+                txt_observaciones_mat.setText(rs.getString("oberservaciones_mat").trim());
+                txt_fecha_mat.setText(rs.getString("date_mat").trim());
+                txt_horas_mat.setText(rs.getString("num_horas_mat").trim());
+                txt_creditos_mat.setText(rs.getString("creditos_mat").trim());
+                txt_malla_mat.setText(rs.getString("malla_mat").trim());
+                txt_descripcion_mat.setText(rs.getString("descripcion_mat").trim());
+            }
+        } catch (SQLException e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_tblMateriaMouseClicked
+
+    private void tblNotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNotaMouseClicked
+       try
+        {
+            int fila = tblNota.getSelectedRow();
+            String id = tblNota.getValueAt(fila, 0).toString();
+
+            PreparedStatement ps;
+            ResultSet rs;
+
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("SELECT * FROM v_nota_consulta WHERE codigo_not = ?");
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+
+            while (rs.next())
+            {
+                txt_cod_not.setText(String.valueOf(id).trim());
+                txt_nota1.setText(rs.getString("nota1_not").trim());
+                txt_nota2.setText(rs.getString("nota2_not").trim());
+                txt_nota3.setText(rs.getString("nota3_not").trim());
+                txt_fecha_not.setText(rs.getString("date_not").trim());
+                txt_observaciones_mat_NOTA.setText(rs.getString("oberservaciones_not").trim());
+                txt_cod_alumno_NOTAS.setText(rs.getString("codigo_alu").trim());
+                txt_cod_prof_NOTA.setText(rs.getString("codigo_pro").trim());
+                txt_cod_mat_NOTA.setText(rs.getString("codigo_mat").trim());
+                txt_promedio_nota.setText(rs.getString("promedio_not").trim());
+            }
+        } catch (SQLException e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }//GEN-LAST:event_tblNotaMouseClicked
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -2239,7 +2513,7 @@ public class interfaz extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e.toString());
         }
     }
-    
+
     private void cargartablaProfesor() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblProfesor.getModel();
         modeloTabla.setRowCount(0);
@@ -2273,7 +2547,75 @@ public class interfaz extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e.toString());
         }
     }
+    
+    private void cargartablaMateria() {
+        DefaultTableModel modeloTabla = (DefaultTableModel) tblMateria.getModel();
+        modeloTabla.setRowCount(0);
 
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+
+        int columnas;
+
+        try
+        {
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("exec sp_seleccion_mat");
+            rs = ps.executeQuery();
+            rsmd = rs.getMetaData();
+            columnas = rsmd.getColumnCount();
+
+            while (rs.next())
+            {
+                Object[] fila = new Object[columnas];
+                for (int indice = 0; indice < columnas; indice++)
+                {
+                    fila[indice] = rs.getObject(indice + 1);
+                }
+                modeloTabla.addRow(fila);
+            }
+
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }
+
+    private void cargartablaNota() {
+        DefaultTableModel modeloTabla = (DefaultTableModel) tblNota.getModel();
+        modeloTabla.setRowCount(0);
+
+        PreparedStatement ps;
+        ResultSet rs;
+        ResultSetMetaData rsmd;
+
+        int columnas;
+
+        try
+        {
+            Connection conectar = Cconexion.estblecerConexion();
+            ps = conectar.prepareStatement("exec sp_seleccion_not");
+            rs = ps.executeQuery();
+            rsmd = rs.getMetaData();
+            columnas = rsmd.getColumnCount();
+
+            while (rs.next())
+            {
+                Object[] fila = new Object[columnas];
+                for (int indice = 0; indice < columnas; indice++)
+                {
+                    fila[indice] = rs.getObject(indice + 1);
+                }
+                modeloTabla.addRow(fila);
+            }
+
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -2315,7 +2657,7 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane Menu;
@@ -2409,6 +2751,8 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JLabel jlb_encabezado1;
     private javax.swing.JLabel jlb_relleno1;
     private javax.swing.JLabel jlb_relleno2;
@@ -2429,6 +2773,8 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_6_Ingreso_Not;
     private javax.swing.JPanel pnl_7_Tabla_Not;
     public javax.swing.JTable tblAlumno;
+    public javax.swing.JTable tblMateria;
+    public javax.swing.JTable tblNota;
     public javax.swing.JTable tblProfesor;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtApellido_pro;
