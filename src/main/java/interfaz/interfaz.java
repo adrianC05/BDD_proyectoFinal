@@ -2493,7 +2493,33 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ELIMINAR_notMouseMoved
 
     private void btn_ELIMINAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_notMouseClicked
-        // TODO add your handling code here:
+        String id = txt_cod_not.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_not ?");
+            ps.setString(1, txt_cod_not.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarNota();
+                cargartablaNota();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarNota();
+                cargartablaNota();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn_ELIMINAR_notMouseClicked
 
     private void btn_ELIMINAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ELIMINAR_notMouseExited
@@ -2605,7 +2631,41 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_GUARDAR_notMouseMoved
 
     private void btn_GUARDAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_notMouseClicked
-        // TODO add your handling code here:
+        Connection conectar = Cconexion.estblecerConexion();
+      
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_ingresar_not ?,?,?,?,?,?,?,?,?,?");
+            ps.setString(1, txt_cod_not.getText());
+            ps.setString(2, txt_nota1.getText());
+            ps.setString(3, txt_nota2.getText());
+            ps.setString(4, txt_nota3.getText());
+            ps.setString(5, txt_promedio_nota.getText());
+            ps.setDate(6, java.sql.Date.valueOf(txt_fecha_not.getText()));            
+            ps.setString(7, txt_observaciones_mat_NOTA.getText());
+            ps.setString(8, txt_cod_alumno_NOTAS.getText());
+            ps.setString(9, txt_cod_prof_NOTA.getText());
+            ps.setString(10, txt_cod_mat_NOTA.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                limpiarNota();
+                cargartablaNota();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarNota();
+                cargartablaNota();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn_GUARDAR_notMouseClicked
 
     private void btn_GUARDAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_notMouseExited
@@ -2617,7 +2677,44 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_MODIFICAR_notMouseMoved
 
     private void btn_MODIFICAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_notMouseClicked
-        // TODO add your handling code here:
+        
+        String id = txt_cod_not.getText();
+        
+        Connection conectar = Cconexion.estblecerConexion();
+      
+        try
+        {
+
+            PreparedStatement ps = conectar.prepareStatement("exec sp_modificar_not ?,?,?,?,?,?,?,?,?,?");
+            ps.setString(1, txt_cod_not.getText());
+            ps.setString(2, txt_nota1.getText());
+            ps.setString(3, txt_nota2.getText());
+            ps.setString(4, txt_nota3.getText());
+            ps.setString(5, txt_promedio_nota.getText());
+            ps.setDate(6, java.sql.Date.valueOf(txt_fecha_not.getText()));            
+            ps.setString(7, txt_observaciones_mat_NOTA.getText());
+            ps.setString(8, txt_cod_alumno_NOTAS.getText());
+            ps.setString(9, txt_cod_prof_NOTA.getText());
+            ps.setString(10, txt_cod_mat_NOTA.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Guardado");
+                limpiarNota();
+                cargartablaNota();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarNota();
+                cargartablaNota();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn_MODIFICAR_notMouseClicked
 
     private void btn_MODIFICAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_notMouseExited
@@ -2629,7 +2726,33 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn__ELIMINAR_notMouseMoved
 
     private void btn__ELIMINAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_notMouseClicked
-        // TODO add your handling code here:
+        String id = txt_cod_not.getText();
+
+        Connection conectar = Cconexion.estblecerConexion();
+
+        try
+        {
+            PreparedStatement ps = conectar.prepareStatement("exec sp_delete_not ?");
+            ps.setString(1, txt_cod_not.getText());
+
+            int res = ps.executeUpdate();
+
+            if (res > 0)
+            {
+                JOptionPane.showMessageDialog(null, "Registro Eliminado");
+                limpiarNota();
+                cargartablaNota();
+            } else
+            {
+                JOptionPane.showMessageDialog(null, "Error al guardar registro");
+                limpiarNota();
+                cargartablaNota();
+            }
+            conectar.close();
+        } catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.toString());
+        }
     }//GEN-LAST:event_btn__ELIMINAR_notMouseClicked
 
     private void btn__ELIMINAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_notMouseExited
@@ -2641,7 +2764,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_LIMPIAR_notMouseMoved
 
     private void btn_LIMPIAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_notMouseClicked
-        // TODO add your handling code here:
+        limpiarNota();
     }//GEN-LAST:event_btn_LIMPIAR_notMouseClicked
 
     private void btn_LIMPIAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_notMouseExited
