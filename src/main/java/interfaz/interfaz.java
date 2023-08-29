@@ -237,6 +237,18 @@ public class interfaz extends javax.swing.JFrame {
         txt_nota2 = new javax.swing.JTextField();
         txt_nota1 = new javax.swing.JTextField();
         txt_cod_not = new javax.swing.JTextField();
+        btn_GUARDAR_not = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        btn_MODIFICAR_not = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        btn__ELIMINAR_not = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        btn_LIMPIAR_not = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
         jlb_relleno7 = new javax.swing.JLabel();
         pnl_7_Tabla_Not = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
@@ -1454,6 +1466,114 @@ public class interfaz extends javax.swing.JFrame {
         });
         pnl_6_Ingreso_Not.add(txt_cod_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 170, -1));
 
+        btn_GUARDAR_not.setBackground(new java.awt.Color(37, 67, 117));
+        btn_GUARDAR_not.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_GUARDAR_not.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_GUARDAR_notMouseMoved(evt);
+            }
+        });
+        btn_GUARDAR_not.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_GUARDAR_notMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_GUARDAR_notMouseExited(evt);
+            }
+        });
+        btn_GUARDAR_not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel60.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setText("Guardar");
+        btn_GUARDAR_not.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+
+        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guardar2.png"))); // NOI18N
+        btn_GUARDAR_not.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 0, -1, 40));
+
+        pnl_6_Ingreso_Not.add(btn_GUARDAR_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 130, 40));
+
+        btn_MODIFICAR_not.setBackground(new java.awt.Color(37, 67, 117));
+        btn_MODIFICAR_not.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_MODIFICAR_not.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_MODIFICAR_notMouseMoved(evt);
+            }
+        });
+        btn_MODIFICAR_not.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_MODIFICAR_notMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_MODIFICAR_notMouseExited(evt);
+            }
+        });
+        btn_MODIFICAR_not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel62.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel62.setText("Modificar");
+        btn_MODIFICAR_not.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 7, 80, 30));
+
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar2.png"))); // NOI18N
+        btn_MODIFICAR_not.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1, -1, 40));
+
+        pnl_6_Ingreso_Not.add(btn_MODIFICAR_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 130, 40));
+
+        btn__ELIMINAR_not.setBackground(new java.awt.Color(37, 67, 117));
+        btn__ELIMINAR_not.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn__ELIMINAR_not.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn__ELIMINAR_notMouseMoved(evt);
+            }
+        });
+        btn__ELIMINAR_not.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn__ELIMINAR_notMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn__ELIMINAR_notMouseExited(evt);
+            }
+        });
+        btn__ELIMINAR_not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel64.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel64.setText("Eliminar");
+        btn__ELIMINAR_not.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+
+        jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacho2.png"))); // NOI18N
+        btn__ELIMINAR_not.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
+
+        pnl_6_Ingreso_Not.add(btn__ELIMINAR_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 130, 40));
+
+        btn_LIMPIAR_not.setBackground(new java.awt.Color(37, 67, 117));
+        btn_LIMPIAR_not.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_LIMPIAR_not.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                btn_LIMPIAR_notMouseMoved(evt);
+            }
+        });
+        btn_LIMPIAR_not.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_LIMPIAR_notMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_LIMPIAR_notMouseExited(evt);
+            }
+        });
+        btn_LIMPIAR_not.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel66.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel66.setText("Limpiar");
+        btn_LIMPIAR_not.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 7, 80, 30));
+
+        jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limpiar.png"))); // NOI18N
+        btn_LIMPIAR_not.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 0, -1, 40));
+
+        pnl_6_Ingreso_Not.add(btn_LIMPIAR_not, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, 130, 40));
+
         jlb_relleno7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RELLENO NOTA.jpeg"))); // NOI18N
         pnl_6_Ingreso_Not.add(jlb_relleno7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 2, 830, 520));
 
@@ -2480,6 +2600,54 @@ public class interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tblNotaMouseClicked
 
+    private void btn_GUARDAR_notMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_notMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GUARDAR_notMouseMoved
+
+    private void btn_GUARDAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_notMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GUARDAR_notMouseClicked
+
+    private void btn_GUARDAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_GUARDAR_notMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_GUARDAR_notMouseExited
+
+    private void btn_MODIFICAR_notMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_notMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_MODIFICAR_notMouseMoved
+
+    private void btn_MODIFICAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_notMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_MODIFICAR_notMouseClicked
+
+    private void btn_MODIFICAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_MODIFICAR_notMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_MODIFICAR_notMouseExited
+
+    private void btn__ELIMINAR_notMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_notMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn__ELIMINAR_notMouseMoved
+
+    private void btn__ELIMINAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_notMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn__ELIMINAR_notMouseClicked
+
+    private void btn__ELIMINAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn__ELIMINAR_notMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn__ELIMINAR_notMouseExited
+
+    private void btn_LIMPIAR_notMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_notMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_LIMPIAR_notMouseMoved
+
+    private void btn_LIMPIAR_notMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_notMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_LIMPIAR_notMouseClicked
+
+    private void btn_LIMPIAR_notMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LIMPIAR_notMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_LIMPIAR_notMouseExited
+
     private void cargartabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumno.getModel();
         modeloTabla.setRowCount(0);
@@ -2674,15 +2842,19 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel btn_ELIMINAR_pro;
     private javax.swing.JPanel btn_GUARDAR;
     private javax.swing.JPanel btn_GUARDAR_mat;
+    private javax.swing.JPanel btn_GUARDAR_not;
     private javax.swing.JPanel btn_GUARDAR_pro;
     private javax.swing.JPanel btn_LIMPIAR;
     private javax.swing.JPanel btn_LIMPIAR_mat;
+    private javax.swing.JPanel btn_LIMPIAR_not;
     private javax.swing.JPanel btn_LIMPIAR_pro;
     private javax.swing.JPanel btn_MODIFICAR;
     private javax.swing.JPanel btn_MODIFICAR_mat;
+    private javax.swing.JPanel btn_MODIFICAR_not;
     private javax.swing.JPanel btn_MODIFICAR_pro;
     private javax.swing.JPanel btn__ELIMINAR;
     private javax.swing.JPanel btn__ELIMINAR_mat;
+    private javax.swing.JPanel btn__ELIMINAR_not;
     private javax.swing.JPanel btn__ELIMINAR_pro;
     private javax.swing.JComboBox<String> cbo_alumnos;
     private javax.swing.JComboBox<String> cbo_docentes;
@@ -2741,6 +2913,14 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
