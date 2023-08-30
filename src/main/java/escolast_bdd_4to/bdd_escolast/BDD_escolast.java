@@ -6,6 +6,8 @@
 package escolast_bdd_4to.bdd_escolast;
 
 import interfaz.interfaz;
+import interfaz.login;
+import interfaz.loginEscolast;
 import interfaz.menu;
 
 /**
@@ -22,7 +24,14 @@ public class BDD_escolast {
         inter.setVisible(true);
         */
         
+        
+        loginEscolast l = new loginEscolast();
+        l.setVisible(true);
+        
+        
+        /*
         menu m = new menu();
         m.setVisible(true);
-    }
+        */
+}
 }

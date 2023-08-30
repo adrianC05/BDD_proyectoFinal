@@ -5,7 +5,13 @@
  */
 package interfaz;
 
+import escolast_bdd_4to.bdd_escolast.Cconexion;
 import java.awt.Color;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,8 +30,8 @@ public class login extends javax.swing.JFrame {
         
         
         
-        USUARIO_INGRESO.setBackground(new java.awt.Color(0,0,0,1));
-        CONTRASENA_INGRESO.setBackground(new java.awt.Color(0,0,0,1));
+        txtUsuario.setBackground(new java.awt.Color(0,0,0,1));
+        txtContrasenia.setBackground(new java.awt.Color(0,0,0,1));
     }
 
     /**
@@ -37,26 +43,37 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CONTRASENA_INGRESO = new javax.swing.JPasswordField();
-        USUARIO_INGRESO = new javax.swing.JTextField();
+        txtContrasenia = new javax.swing.JPasswordField();
+        txtUsuario = new javax.swing.JTextField();
         btb_ACCEDER = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btb_SALIR = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        btnAccederUsuario = new javax.swing.JButton();
         lbl_fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CONTRASENA_INGRESO.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        CONTRASENA_INGRESO.setForeground(new java.awt.Color(204, 204, 204));
-        CONTRASENA_INGRESO.setBorder(null);
-        getContentPane().add(CONTRASENA_INGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 356, 330, 30));
+        txtContrasenia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtContrasenia.setForeground(new java.awt.Color(204, 204, 204));
+        txtContrasenia.setBorder(null);
+        txtContrasenia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContraseniaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 356, 330, 30));
 
-        USUARIO_INGRESO.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
-        USUARIO_INGRESO.setForeground(new java.awt.Color(204, 204, 204));
-        USUARIO_INGRESO.setBorder(null);
-        getContentPane().add(USUARIO_INGRESO, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 330, 30));
+        txtUsuario.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
+        txtUsuario.setBorder(null);
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 330, 30));
 
         btb_ACCEDER.setBackground(new java.awt.Color(72, 137, 173));
         btb_ACCEDER.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -106,6 +123,14 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().add(btb_SALIR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 190, 50));
 
+        btnAccederUsuario.setText("Acceder");
+        btnAccederUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccederUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAccederUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
         lbl_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login-1.jpeg"))); // NOI18N
         getContentPane().add(lbl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 570));
 
@@ -129,12 +154,60 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_btb_SALIRMouseExited
 
     private void btb_ACCEDERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btb_ACCEDERMouseClicked
+               
         this.setVisible(false);
     }//GEN-LAST:event_btb_ACCEDERMouseClicked
 
     private void btb_SALIRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btb_SALIRMouseClicked
         System.exit(0);
     }//GEN-LAST:event_btb_SALIRMouseClicked
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void txtContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseniaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtContraseniaActionPerformed
+
+    private void btnAccederUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederUsuarioActionPerformed
+        String codigoUsu = txtUsuario.getText();
+        String contraseniaUsu = new String(txtContrasenia.getPassword());
+
+        try {
+            Connection conectar = Cconexion.estblecerConexion(); // Obtén la conexión a la base de datos
+
+            String sql = "sp_login_usu(?, ?) }";
+            CallableStatement statement = conectar.prepareCall(sql);
+
+            statement.setString(1, codigoUsu);
+            statement.setString(2, contraseniaUsu);
+
+            boolean hasResults = statement.execute();
+
+            if (hasResults) {
+                // Puede haber varios conjuntos de resultados, pero asumamos uno
+                while (statement.getResultSet().next()) {
+                    String mensaje = statement.getResultSet().getString("Mensaje");
+                    if (mensaje.equals("Acceso concedido")) {
+                        // Acceso concedido, realiza las acciones necesarias
+                        // por ejemplo, abre una nueva ventana o realiza alguna operación
+                        JOptionPane.showMessageDialog(this, "Acceso concedido");
+                    } else {
+                        // Acceso denegado, muestra un mensaje de error
+                        JOptionPane.showMessageDialog(this, "Acceso denegado");
+                    }
+                }
+            }
+
+            statement.close();
+            conectar.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Manejo de excepciones
+        }
+    }//GEN-LAST:event_btnAccederUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,12 +246,13 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField CONTRASENA_INGRESO;
-    private javax.swing.JTextField USUARIO_INGRESO;
     private javax.swing.JPanel btb_ACCEDER;
     private javax.swing.JPanel btb_SALIR;
+    private javax.swing.JButton btnAccederUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lbl_fondo;
+    private javax.swing.JPasswordField txtContrasenia;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

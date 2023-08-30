@@ -266,7 +266,7 @@ public class interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlb_encabezado1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ENCABEZADO1.jpeg"))); // NOI18N
-        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 100));
+        getContentPane().add(jlb_encabezado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1130, 160));
 
         panel_btn.setBackground(new java.awt.Color(35, 63, 111));
         panel_btn.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
